@@ -182,8 +182,26 @@ function drawNextBall(){
 function processDraw(ball){
 
 
-    const managerName =
-    ball.managerName;
+    const managerId =
+    ball.managerId;
+
+
+
+    const manager =
+    remainingManagers.find(
+
+        m =>
+        m.id === managerId
+
+    );
+
+
+
+    if(!manager){
+
+        return;
+
+    }
 
 
 
@@ -193,16 +211,17 @@ function processDraw(ball){
     );
 
 
+
     if(result){
 
         result.innerHTML =
 
         `
         <strong>
-        Drawn Ball:
+        Eliminated:
         </strong>
 
-        ${managerName}
+        ${manager.name}
 
         `;
 
@@ -210,49 +229,9 @@ function processDraw(ball){
 
 
 
-    const managerId =
-    ball.managerId;
-
-
-
-    const remainingBalls =
-
-    lotteryBalls.filter(
-
-        item =>
-        item.managerId === managerId
-
+    eliminateManager(
+        managerId
     );
-
-
-
-    if(
-        remainingBalls.length === 0
-    ){
-
-
-        eliminateManager(
-            managerId
-        );
-
-
-        if(result){
-
-            result.innerHTML =
-
-            `
-            <strong>
-            Eliminated:
-            </strong>
-
-            ${managerName}
-
-            `;
-
-        }
-
-
-    }
 
 
 
@@ -260,6 +239,7 @@ function processDraw(ball){
 
 
 }
+
 // ======================================
 // ELIMINATE MANAGER
 // ======================================
@@ -304,10 +284,45 @@ function eliminateManager(id){
 
 
 
-    console.log(
-        "Eliminated:",
-        eliminated.name
+    // Remove all remaining balls
+    lotteryBalls =
+
+    lotteryBalls.filter(
+
+        ball =>
+        ball.managerId !== id
+
     );
+
+
+
+    const results =
+    document.getElementById(
+        "resultsPanel"
+    );
+
+
+
+    if(results){
+
+        results.innerHTML +=
+
+        `
+
+        <p>
+
+        Eliminated:
+
+        <strong>
+        ${eliminated.name}
+        </strong>
+
+        </p>
+
+        `;
+
+    }
+
 
 
 }
