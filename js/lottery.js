@@ -11,6 +11,8 @@ let finalOrder = [];
 
 let lotteryBalls = [];
 
+let lotteryActive = false;
+
 
 // ======================================
 // INITIALISE LOTTERY
@@ -50,6 +52,47 @@ function initialiseLottery(){
         "Lottery initialised",
         remainingManagers
     );
+
+
+}
+
+// ======================================
+// START LOTTERY
+// ======================================
+
+function startLottery(){
+
+
+    initialiseLottery();
+
+    buildBallMachine();
+
+    lotteryActive = true;
+
+
+    document
+    .getElementById(
+        "drawBall"
+    )
+    .disabled = false;
+
+
+    document
+    .getElementById(
+        "startButton"
+    )
+    .disabled = true;
+
+
+    document
+    .getElementById(
+        "drawResult"
+    )
+    .innerHTML =
+    "Lottery started.";
+
+
+    updateDashboard();
 
 
 }
@@ -110,6 +153,12 @@ function buildBallMachine(){
 
 
 function drawNextBall(){
+
+    if(!lotteryActive){
+
+    return;
+
+}
 
     if(lotteryBalls.length === 0){
 
@@ -359,23 +408,6 @@ if(results){
 }
 
 // ======================================
-// BUILD FINAL DRAFT ORDER
-// ======================================
-
-
-function buildFinalOrder(){
-
-
-    finalOrder =
-
-    [...eliminatedManagers]
-    .reverse();
-
-
-
-}
-
-// ======================================
 // COMPLETE LOTTERY
 // ======================================
 
@@ -395,7 +427,21 @@ function completeLottery(){
 
     renderFinalOrder();
 
+lotteryActive = false;
 
+
+document
+.getElementById(
+    "drawBall"
+)
+.disabled = true;
+
+
+document
+.getElementById(
+    "startButton"
+)
+.disabled = false;
 
     const result =
     document.getElementById(
