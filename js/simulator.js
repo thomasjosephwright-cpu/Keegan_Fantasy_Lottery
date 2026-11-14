@@ -1,1 +1,1 @@
-
+console.log("Simulator loaded");
