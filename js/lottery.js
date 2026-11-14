@@ -175,6 +175,34 @@ function drawNextBall(){
 function processDraw(ball){
 
 
+    const managerName =
+    ball.managerName;
+
+
+
+    const result =
+    document.getElementById(
+        "drawResult"
+    );
+
+
+    if(result){
+
+        result.innerHTML =
+
+        `
+        <strong>
+        Drawn Ball:
+        </strong>
+
+        ${managerName}
+
+        `;
+
+    }
+
+
+
     const managerId =
     ball.managerId;
 
@@ -201,6 +229,22 @@ function processDraw(ball){
         );
 
 
+        if(result){
+
+            result.innerHTML =
+
+            `
+            <strong>
+            Eliminated:
+            </strong>
+
+            ${managerName}
+
+            `;
+
+        }
+
+
     }
 
 
@@ -209,7 +253,6 @@ function processDraw(ball){
 
 
 }
-
 // ======================================
 // ELIMINATE MANAGER
 // ======================================
