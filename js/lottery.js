@@ -9,7 +9,7 @@ let eliminatedManagers = [];
 
 let finalOrder = [];
 
-
+let lotteryBalls = [];
 
 
 // ======================================
@@ -49,6 +49,56 @@ function initialiseLottery(){
     console.log(
         "Lottery initialised",
         remainingManagers
+    );
+
+
+}
+
+// ======================================
+// BUILD LOTTERY BALL MACHINE
+// ======================================
+
+
+function buildBallMachine(){
+
+
+    lotteryBalls = [];
+
+
+
+    remainingManagers.forEach(
+    manager => {
+
+
+        for(
+            let i = 0;
+            i < manager.balls;
+            i++
+        ){
+
+            lotteryBalls.push({
+
+                managerId:
+                manager.id,
+
+
+                managerName:
+                manager.name
+
+
+            });
+
+
+        }
+
+
+    });
+
+
+
+    console.log(
+        "Lottery machine built",
+        lotteryBalls
     );
 
 
