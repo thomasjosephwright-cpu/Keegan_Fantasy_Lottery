@@ -8,19 +8,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
-Keegan Fantasy Lottery
+Keegan Fantasy Draft Lottery
 </title>
 
 <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
-
 <div class="app">
-
 
 <header class="header">
 
@@ -34,257 +31,234 @@ Weighted Elimination Lottery System
 
 </header>
 
-
-
 <main>
 
+<!-- ====================================== -->
+<!-- HERO -->
+<!-- ====================================== -->
 
-<section class="machine-section">
+<section class="hero">
 
+    <div class="machine">
 
-<h2>
-Lottery Machine
-</h2>
+        <h2>
+        Lottery Machine
+        </h2>
 
+        <div id="lotteryMachine">
 
-<div id="lotteryMachine">
+            <div id="machineStatus">
 
+            READY
 
-<div id="machineStatus">
+            </div>
 
-READY
+        </div>
 
-</div>
+        <button id="startButton">
 
+        Start Lottery
 
-</div>
+        </button>
 
+    </div>
 
 </section>
 
 
+<!-- ====================================== -->
+<!-- CURRENT DRAW -->
+<!-- ====================================== -->
+
+<section class="panel">
+
+    <h3>
+    Current Draw
+    </h3>
+
+    <div id="drawResult">
+
+    Waiting to begin...
+
+    </div>
+
+</section>
 
 
+<!-- ====================================== -->
+<!-- LIVE DASHBOARD -->
+<!-- ====================================== -->
 
 <section class="dashboard">
 
-<section class="panel">
+    <section class="panel">
 
-<h3>
-Lottery Machine
-</h3>
+        <h3>
+        Remaining Managers
+        </h3>
 
+        <div id="remainingPanel">
 
-<div id="machineDisplay">
+        Loading...
 
-Ready to draw.
+        </div>
 
-</div>
+    </section>
 
+    <section class="panel">
 
-<button id="drawBall">
+        <h3>
+        Elimination Chances
+        </h3>
 
-Draw Ball
+        <div id="oddsPanel">
 
-</button>
+        Loading...
 
+        </div>
 
-<div id="drawResult">
-
-Awaiting draw...
-
-</div>
-
-
-</section>
-
-<div class="panel">
-
-<h3>
-Elimination Chances
-</h3>
-
-
-<div id="oddsPanel">
-
-Loading...
-
-</div>
-
-
-</div>
-
-
-
-
-<div class="panel">
-
-<h3>
-Remaining Managers
-</h3>
-
-
-<div id="remainingPanel">
-
-Loading...
-
-</div>
-
-
-</div>
-
-
+    </section>
 
 </section>
 
 
-
-
-
-
-<section class="panel">
-
-
-<h3>
-Elimination Results
-</h3>
-
-
-<div id="resultsPanel">
-
-No lottery completed.
-
-</div>
-
-
-</section>
-
-
-
-
-
+<!-- ====================================== -->
+<!-- HISTORY -->
+<!-- ====================================== -->
 
 <section class="panel">
 
+    <h3>
+    Elimination Results
+    </h3>
 
-<h3>
-Final Draft Order
-</h3>
+    <div id="resultsPanel">
 
+    No lottery completed.
 
-<div id="draftPanel">
-
-Awaiting lottery.
-
-</div>
-
+    </div>
 
 </section>
 
 <section class="panel">
 
-<h3>
-Manager Settings
-</h3>
+    <h3>
+    Final Draft Order
+    </h3>
 
+    <div id="draftPanel">
 
-<div id="managerEditor">
+    Awaiting lottery.
 
-Loading managers...
-
-</div>
-
-
-<button id="addManager">
-
-+ Add Manager
-
-</button>
-
-
-<button id="saveManagers">
-
-Apply Settings
-
-</button>
-
+    </div>
 
 </section>
+
+
+<!-- ====================================== -->
+<!-- MANAGER SETTINGS -->
+<!-- ====================================== -->
+
+<details id="managerSection" open>
+
+    <summary>
+
+    Manager Settings
+
+    </summary>
+
+    <div class="panel">
+
+        <div id="managerEditor">
+
+        Loading managers...
+
+        </div>
+
+        <button id="addManager">
+
+        + Add Manager
+
+        </button>
+
+        <button id="saveManagers">
+
+        Apply Settings
+
+        </button>
+
+    </div>
+
+</details>
+
+
+<!-- ====================================== -->
+<!-- APPLICATION SETTINGS -->
+<!-- ====================================== -->
+
+<details>
+
+    <summary>
+
+    Application Settings
+
+    </summary>
+
+    <div class="panel">
+
+        Coming soon...
+
+    </div>
+
+</details>
+
+
+<!-- ====================================== -->
+<!-- DEVELOPER TOOLS -->
+<!-- ====================================== -->
+
+<details>
+
+    <summary>
+
+    Developer Tools
+
+    </summary>
+
+    <div class="panel">
+
+        <button id="drawBall">
+
+        Draw Ball
+
+        </button>
+
+        <button id="simulateButton">
+
+        Simulate
+
+        </button>
+
+        <button id="inspectButton">
+
+        Inspect Machine
+
+        </button>
+
+    </div>
+
+</details>
 
 </main>
 
-
-
-
-
-<footer>
-
-<div class="primary-control">
-
-<button id="startButton">
-
-Start Lottery
-
-</button>
-
 </div>
-
-
-<div class="secondary-controls">
-
-
-<button id="resetButton">
-
-Reset
-
-</button>
-
-
-<button id="simulateButton">
-
-Simulate
-
-</button>
-
-
-<button id="inspectButton">
-
-Inspect Machine
-
-</button>
-
-
-<button id="settingsButton">
-
-Settings
-
-</button>
-
-
-</div>
-
-
-</footer>
-
-
-
-</div>
-
-
-
 
 <script src="js/settings.js"></script>
-
 <script src="js/lottery.js"></script>
-
 <script src="js/ui.js"></script>
-
 <script src="js/animation.js"></script>
-
 <script src="js/simulator.js"></script>
-
 <script src="js/app.js"></script>
-
 
 </body>
 
