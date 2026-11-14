@@ -12,45 +12,69 @@
 // Change these values to adjust odds
 
 
-const managers = [
+// ======================================
+// MANAGER DATA
+// ======================================
+
+
+let managers = [
 
     {
-        id:1,
+        id: generateId(),
         name:"Manager 1",
         weight:12
     },
 
     {
-        id:2,
+        id: generateId(),
         name:"Manager 2",
         weight:8
     },
 
     {
-        id:3,
+        id: generateId(),
         name:"Manager 3",
         weight:6
     },
 
     {
-        id:4,
+        id: generateId(),
         name:"Manager 4",
         weight:4
     },
 
     {
-        id:5,
+        id: generateId(),
         name:"Manager 5",
         weight:2
     },
 
     {
-        id:6,
+        id: generateId(),
         name:"Manager 6",
         weight:1
     }
 
 ];
+
+
+// ======================================
+// ID GENERATOR
+// ======================================
+
+
+function generateId(){
+
+    return (
+        "manager_" +
+        Date.now() +
+        "_" +
+        Math.floor(
+            Math.random()*1000
+        )
+    );
+
+}
 
 
 
