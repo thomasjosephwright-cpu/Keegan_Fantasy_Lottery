@@ -16,3 +16,17 @@ updateDashboard();
 
 
 });
+
+document
+.getElementById(
+    "inspectButton"
+)
+.addEventListener(
+"click",
+()=>{
+
+
+    inspectMachine();
+
+
+});
