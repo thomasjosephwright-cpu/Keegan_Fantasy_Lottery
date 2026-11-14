@@ -57,8 +57,8 @@ body{
 
     background:#111c30;
     border-radius:20px;
-    padding:35px;
-    margin-bottom:30px;
+    padding:45px;
+    margin-bottom:40px;
     text-align:center;
 
 }
@@ -77,9 +77,10 @@ body{
 #lotteryMachine{
 
     height:320px;
+    width: 100%;
     max-width:700px;
 
-    margin:0 auto 30px;
+    margin:0 auto 40px;
 
     border-radius:24px;
 
@@ -164,15 +165,15 @@ button:disabled{
 
     width:100%;
 
-    max-width:450px;
+    max-width:700px;
 
-    margin:auto;
+    margin:0 auto;
 
     display:block;
 
-    padding:18px;
+    padding:20px;
 
-    font-size:1.3rem;
+    font-size:1.4rem;
 
     font-weight:bold;
 
@@ -206,7 +207,7 @@ button:disabled{
 
     padding:25px;
 
-    margin-bottom:25px;
+    margin-bottom:30px;
 
 }
 
@@ -230,7 +231,7 @@ button:disabled{
 
     repeat(2,1fr);
 
-    gap:25px;
+    gap:30px;
 
     margin-bottom:25px;
 
