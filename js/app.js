@@ -1,1 +1,14 @@
-console.log("Application loaded");
+// ======================================
+// APPLICATION START
+// ======================================
+
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+
+    initialiseLottery();
+
+
+});
