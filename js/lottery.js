@@ -111,7 +111,14 @@ function buildBallMachine(){
 
 function drawNextBall(){
 
+    buildBallMachine();
 
+    alert(
+        "Balls available: "
+        +
+        lotteryBalls.length
+    );
+    
     alert(
         "Balls available: " 
         +
