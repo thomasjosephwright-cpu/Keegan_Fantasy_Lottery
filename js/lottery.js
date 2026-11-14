@@ -103,3 +103,52 @@ function buildBallMachine(){
 
 
 }
+
+// ======================================
+// DRAW NEXT BALL
+// ======================================
+
+
+function drawNextBall(){
+
+
+    if(lotteryBalls.length === 0){
+
+
+        console.log(
+            "No balls remaining"
+        );
+
+
+        return;
+
+
+    }
+
+
+
+    const randomIndex =
+
+    Math.floor(
+
+        Math.random()
+        *
+        lotteryBalls.length
+
+    );
+
+
+
+    const selectedBall =
+
+    lotteryBalls[randomIndex];
+
+
+
+    console.log(
+        "Selected ball",
+        selectedBall
+    );
+
+
+}
