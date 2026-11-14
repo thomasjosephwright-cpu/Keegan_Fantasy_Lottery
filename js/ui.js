@@ -209,3 +209,29 @@ function renderRemaining(){
 
 
 }
+
+// ======================================
+// INSPECT LOTTERY MACHINE
+// ======================================
+
+
+function inspectMachine(){
+
+
+    console.log(
+        lotteryBalls
+    );
+
+
+    alert(
+
+        "Lottery machine contains "
+        +
+        lotteryBalls.length
+        +
+        " balls."
+
+    );
+
+
+}
