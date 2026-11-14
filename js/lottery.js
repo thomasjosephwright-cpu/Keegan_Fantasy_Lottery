@@ -113,20 +113,7 @@ function drawNextBall(){
 
     buildBallMachine();
 
-    alert(
-        "Balls available: "
-        +
-        lotteryBalls.length
-    );
-    
-    alert(
-        "Balls available: " 
-        +
-        lotteryBalls.length
-    );
-
-
-    if(lotteryBalls.length === 0){
+      if(lotteryBalls.length === 0){
 
 
         console.log(
@@ -301,7 +288,16 @@ function eliminateManager(id){
 
     );
 
+document
+.getElementById(
+    "machineDisplay"
+)
+.innerHTML =
 
+`
+Balls remaining:
+${lotteryBalls.length}
+`;
 
     const results =
     document.getElementById(
