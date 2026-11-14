@@ -278,12 +278,6 @@ function renderFinalOrder(){
 
 }
 
-
-
-// ======================================
-// INSPECT LOTTERY MACHINE
-// ======================================
-
     
 // ======================================
 // INSPECT LOTTERY MACHINE
