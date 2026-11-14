@@ -8,7 +8,9 @@ document.addEventListener(
 ()=>{
 
 
-    initialiseLottery();
+initialiseLottery();
+
+buildBallMachine();
 
 updateDashboard();
 
