@@ -323,29 +323,41 @@ ${lotteryBalls.length}
 
 
 
-    if(results){
+if(results){
 
-        results.innerHTML +=
 
-`
+    if(
+        eliminatedManagers.length === 1
+    ){
 
-<p>
-
-Draw ${eliminatedManagers.length}
-
-<br>
-
-<strong>
-${eliminated.name}
-</strong>
-
-eliminated
-
-</p>
-
-`;
+        results.innerHTML = "";
 
     }
+
+
+
+    results.innerHTML +=
+
+    `
+
+    <p>
+
+    Draw ${eliminatedManagers.length}
+
+    <br>
+
+    Eliminated:
+
+    <strong>
+    ${eliminated.name}
+    </strong>
+
+    </p>
+
+    `;
+
+
+}
 
 
 
