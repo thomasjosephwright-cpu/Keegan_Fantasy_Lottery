@@ -14,6 +14,8 @@ buildBallMachine();
 
 updateDashboard();
 
+renderManagerEditor();
+
 
 });
 
@@ -27,6 +29,20 @@ document
 
 
     inspectMachine();
+
+
+});
+
+document
+.getElementById(
+    "saveManagers"
+)
+.addEventListener(
+"click",
+()=>{
+
+
+    saveManagerSettings();
 
 
 });
