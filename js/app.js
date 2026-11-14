@@ -7,9 +7,6 @@ document.addEventListener(
 "DOMContentLoaded",
 ()=>{
 
-    alert("App loaded");
-
-
     initialiseLottery();
 
     buildBallMachine();
