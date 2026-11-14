@@ -260,8 +260,12 @@ function eliminateManager(id){
 
 
     eliminatedManagers.push(
-        eliminated
-    );
+    {
+        ...eliminated,
+        eliminatedAt:
+        eliminatedManagers.length + 1
+    }
+);
 
 
 
@@ -308,19 +312,23 @@ ${lotteryBalls.length}
 
         results.innerHTML +=
 
-        `
+`
 
-        <p>
+<p>
 
-        Eliminated:
+Draw ${eliminatedManagers.length}
 
-        <strong>
-        ${eliminated.name}
-        </strong>
+<br>
 
-        </p>
+<strong>
+${eliminated.name}
+</strong>
 
-        `;
+eliminated
+
+</p>
+
+`;
 
     }
 
