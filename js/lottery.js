@@ -111,9 +111,7 @@ function buildBallMachine(){
 
 function drawNextBall(){
 
-    buildBallMachine();
-
-      if(lotteryBalls.length === 0){
+    if(lotteryBalls.length === 0){
 
 
         console.log(
