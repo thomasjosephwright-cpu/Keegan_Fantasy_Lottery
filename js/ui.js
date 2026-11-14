@@ -11,6 +11,8 @@ function updateDashboard(){
 
     renderRemaining();
 
+    renderFinalOrder();
+
 
 }
 
@@ -210,6 +212,79 @@ function renderRemaining(){
 
 }
 
+// ======================================
+// FINAL DRAFT ORDER
+// ======================================
+
+
+function renderFinalOrder(){
+
+
+    const container =
+    document.getElementById(
+        "draftPanel"
+    );
+
+
+    if(!container){
+
+        return;
+
+    }
+
+
+    if(!finalOrder.length){
+
+        container.innerHTML =
+        "Awaiting lottery.";
+
+        return;
+
+    }
+
+
+
+    let html = "<ol>";
+
+
+
+    finalOrder.forEach(
+    manager => {
+
+
+        html +=
+
+        `
+
+        <li>
+
+        ${manager.name}
+
+        </li>
+
+        `;
+
+
+    });
+
+
+
+    html += "</ol>";
+
+
+    container.innerHTML =
+    html;
+
+
+}
+
+
+
+// ======================================
+// INSPECT LOTTERY MACHINE
+// ======================================
+
+    
 // ======================================
 // INSPECT LOTTERY MACHINE
 // ======================================
