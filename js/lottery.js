@@ -112,6 +112,13 @@ function buildBallMachine(){
 function drawNextBall(){
 
 
+    alert(
+        "Balls available: " 
+        +
+        lotteryBalls.length
+    );
+
+
     if(lotteryBalls.length === 0){
 
 
