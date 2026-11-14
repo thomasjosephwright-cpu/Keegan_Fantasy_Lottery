@@ -431,6 +431,18 @@ function addManager(){
 function removeManager(id){
 
 
+    if(managers.length <= 1){
+
+        alert(
+            "You must have at least one manager."
+        );
+
+        return;
+
+    }
+
+
+
     managers =
     managers.filter(
 
