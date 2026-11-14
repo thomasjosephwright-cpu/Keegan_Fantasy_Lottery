@@ -9,7 +9,7 @@ let eliminatedManagers = [];
 
 let finalOrder = [];
 
-let lotteryBalls = [];
+let lotteryballs = [];
 
 
 // ======================================
@@ -62,7 +62,7 @@ function initialiseLottery(){
 function buildBallMachine(){
 
 
-    lotteryBalls = [];
+    lotteryballs = [];
 
 
 
@@ -72,11 +72,11 @@ function buildBallMachine(){
 
         for(
             let i = 0;
-            i < manager.balls;
+            i < manager.weight;
             i++
         ){
 
-            lotteryBalls.push({
+            lotteryballs.push({
 
                 managerId:
                 manager.id,
@@ -98,7 +98,7 @@ function buildBallMachine(){
 
     console.log(
         "Lottery machine built",
-        lotteryBalls
+        lotteryballs
     );
 
 
