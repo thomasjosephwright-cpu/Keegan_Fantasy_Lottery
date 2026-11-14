@@ -145,9 +145,118 @@ function drawNextBall(){
 
 
 
+    // Remove selected ball
+    lotteryBalls.splice(
+        randomIndex,
+        1
+    );
+
+
+
     console.log(
         "Selected ball",
         selectedBall
+    );
+
+
+
+    processDraw(
+        selectedBall
+    );
+
+
+}
+
+// ======================================
+// PROCESS DRAW RESULT
+// ======================================
+
+
+function processDraw(ball){
+
+
+    const managerId =
+    ball.managerId;
+
+
+
+    const remainingBalls =
+
+    lotteryBalls.filter(
+
+        item =>
+        item.managerId === managerId
+
+    );
+
+
+
+    if(
+        remainingBalls.length === 0
+    ){
+
+
+        eliminateManager(
+            managerId
+        );
+
+
+    }
+
+
+
+    updateDashboard();
+
+
+}
+
+// ======================================
+// ELIMINATE MANAGER
+// ======================================
+
+
+function eliminateManager(id){
+
+
+    const eliminated =
+
+    remainingManagers.find(
+
+        manager =>
+        manager.id === id
+
+    );
+
+
+
+    if(!eliminated){
+
+        return;
+
+    }
+
+
+
+    eliminatedManagers.push(
+        eliminated
+    );
+
+
+
+    remainingManagers =
+
+    remainingManagers.filter(
+
+        manager =>
+        manager.id !== id
+
+    );
+
+
+
+    console.log(
+        "Eliminated:",
+        eliminated.name
     );
 
 
