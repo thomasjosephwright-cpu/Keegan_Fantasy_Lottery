@@ -232,13 +232,8 @@ if(
     remainingManagers.length === 1
 ){
 
-    finalOrder =
+    completeLottery();
 
-    [
-        ...remainingManagers,
-        ...eliminatedManagers.reverse()
-    ];
-    
 }
 
 
@@ -381,6 +376,57 @@ function buildFinalOrder(){
 }
 
 // ======================================
+// COMPLETE LOTTERY
+// ======================================
+
+
+function completeLottery(){
+
+
+    finalOrder =
+
+    [
+        ...remainingManagers,
+        ...[...eliminatedManagers]
+        .reverse()
+    ];
+
+
+
+    renderFinalOrder();
+
+
+
+    const result =
+    document.getElementById(
+        "resultsPanel"
+    );
+
+
+    if(result){
+
+        result.innerHTML +=
+
+        `
+
+        <hr>
+
+        <p>
+
+        <strong>
+        Lottery Complete
+        </strong>
+
+        </p>
+
+        `;
+
+    }
+
+
+}
+
+// ======================================
 // DISPLAY FINAL ORDER
 // ======================================
 
@@ -410,13 +456,21 @@ function renderFinalOrder(){
     manager => {
 
 
-        html +=
+       html +=
 
-        `
-        <li>
-        ${manager.name}
-        </li>
-        `;
+`
+<li>
+
+<strong>
+Pick ${finalOrder.indexOf(manager) + 1}
+</strong>
+
+-
+${manager.name}
+
+</li>
+
+`;
 
 
     });
