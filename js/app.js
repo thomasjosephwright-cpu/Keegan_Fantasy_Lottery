@@ -8,58 +8,72 @@ document.addEventListener(
 ()=>{
 
 
-initialiseLottery();
+    initialiseLottery();
 
-buildBallMachine();
+    buildBallMachine();
 
-updateDashboard();
+    updateDashboard();
 
-renderManagerEditor();
+    renderManagerEditor();
+
+
+
+    document
+    .getElementById(
+        "inspectButton"
+    )
+    .addEventListener(
+    "click",
+    ()=>{
+
+
+        inspectMachine();
+
+
+    });
+
+
+
+    document
+    .getElementById(
+        "saveManagers"
+    )
+    .addEventListener(
+    "click",
+    ()=>{
+
+
+        saveManagerSettings();
+
+
+    });
+
+
+
+    document
+    .getElementById(
+        "addManager"
+    )
+    .addEventListener(
+    "click",
+    ()=>{
+
+
+        addManager();
+
+
+    });
 
 
 });
 
-document
-.getElementById(
-    "inspectButton"
-)
-.addEventListener(
-"click",
-()=>{
 
 
-    inspectMachine();
 
+// ======================================
+// REMOVE MANAGER BUTTONS
+// ======================================
 
-});
-
-document
-.getElementById(
-    "saveManagers"
-)
-.addEventListener(
-"click",
-()=>{
-
-
-    saveManagerSettings();
-
-
-});
-
-document
-.getElementById(
-    "addManager"
-)
-.addEventListener(
-"click",
-()=>{
-
-
-    addManager();
-
-
-});
 
 document
 .addEventListener(
