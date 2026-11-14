@@ -64,6 +64,19 @@ document.addEventListener(
 
     });
 
+    document
+.getElementById(
+    "drawBall"
+)
+.addEventListener(
+"click",
+()=>{
+
+
+    drawNextBall();
+
+
+});
 
 });
 
