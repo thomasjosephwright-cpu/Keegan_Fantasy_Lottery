@@ -48,7 +48,7 @@ function renderOdds(){
 
 
 
-    const totalweight =
+    const totalWeight =
     remainingManagers.reduce(
 
         (total,manager)=>
