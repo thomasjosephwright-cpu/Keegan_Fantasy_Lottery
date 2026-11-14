@@ -46,3 +46,39 @@ document
 
 
 });
+
+document
+.getElementById(
+    "addManager"
+)
+.addEventListener(
+"click",
+()=>{
+
+
+    addManager();
+
+
+});
+
+document
+.addEventListener(
+"click",
+event=>{
+
+
+    if(
+        event.target.classList
+        .contains(
+            "remove-manager"
+        )
+    ){
+
+        removeManager(
+            event.target.dataset.id
+        );
+
+    }
+
+
+});
