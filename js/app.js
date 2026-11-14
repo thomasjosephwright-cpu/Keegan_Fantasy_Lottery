@@ -15,7 +15,11 @@ document.addEventListener(
 
     renderManagerEditor();
 
-
+document
+.getElementById(
+    "drawBall"
+)
+.disabled = true;
 
     document
     .getElementById(
@@ -73,6 +77,20 @@ document.addEventListener(
 
 
     drawNextBall();
+
+
+});
+
+    document
+.getElementById(
+    "startButton"
+)
+.addEventListener(
+"click",
+()=>{
+
+
+    startLottery();
 
 
 });
