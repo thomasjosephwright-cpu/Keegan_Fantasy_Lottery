@@ -290,51 +290,20 @@ function renderManagerEditor(){
 
             >
 
-html += `
 
 
-<div class="manager-row">
+            <button
 
+            class="remove-manager"
 
-    <input
+            data-id="${manager.id}"
 
-    class="manager-name"
+            >
 
-    data-id="${manager.id}"
+            Remove
 
-    value="${manager.name}"
+            </button>
 
-    >
-
-
-
-    <input
-
-    class="manager-weight"
-
-    type="number"
-
-    min="1"
-
-    data-id="${manager.id}"
-
-    value="${manager.weight}"
-
-    >
-
-
-
-    <button
-
-    class="remove-manager"
-
-    data-id="${manager.id}"
-
-    >
-
-    Remove
-
-    </button>
 
 
         </div>
