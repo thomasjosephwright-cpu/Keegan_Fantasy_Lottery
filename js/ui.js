@@ -235,3 +235,146 @@ function inspectMachine(){
 
 
 }
+
+// ======================================
+// MANAGER EDITOR
+// ======================================
+
+
+function renderManagerEditor(){
+
+
+    const container =
+    document.getElementById(
+        "managerEditor"
+    );
+
+
+    let html = "";
+
+
+
+    managers.forEach(
+    manager => {
+
+
+        html += `
+
+
+        <div class="manager-row">
+
+
+            <input
+
+            class="manager-name"
+
+            data-id="${manager.id}"
+
+            value="${manager.name}"
+
+            >
+
+
+
+            <input
+
+            class="manager-weight"
+
+            type="number"
+
+            min="1"
+
+            data-id="${manager.id}"
+
+            value="${manager.weight}"
+
+            >
+
+
+
+        </div>
+
+
+        `;
+
+
+    });
+
+
+
+    container.innerHTML =
+    html;
+
+
+
+}
+
+function saveManagerSettings(){
+
+
+    const names =
+    document.querySelectorAll(
+        ".manager-name"
+    );
+
+
+    const weights =
+    document.querySelectorAll(
+        ".manager-weight"
+    );
+
+
+
+    names.forEach(
+    input => {
+
+
+        const manager =
+        managers.find(
+            m =>
+            m.id ==
+            input.dataset.id
+        );
+
+
+        manager.name =
+        input.value;
+
+
+    });
+
+
+
+    weights.forEach(
+    input => {
+
+
+        const manager =
+        managers.find(
+            m =>
+            m.id ==
+            input.dataset.id
+        );
+
+
+        manager.weight =
+        Number(
+            input.value
+        );
+
+
+    });
+
+
+
+    initialiseLottery();
+
+    buildBallMachine();
+
+    updateDashboard();
+
+    renderManagerEditor();
+
+
+
+}
