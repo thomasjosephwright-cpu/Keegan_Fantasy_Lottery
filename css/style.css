@@ -299,3 +299,76 @@ font-size:2rem;
     gap:10px;
 
 }
+
+/* ======================================
+   ODDS DISPLAY
+====================================== */
+
+
+.odds-entry{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.odds-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+    font-size:0.95rem;
+
+}
+
+
+
+.bar{
+
+    height:14px;
+
+    background:#334155;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+
+
+.fill{
+
+    height:100%;
+
+    background:#38bdf8;
+
+    border-radius:10px;
+
+}
+
+
+
+#remainingPanel ul{
+
+    list-style:none;
+
+}
+
+
+
+#remainingPanel li{
+
+    padding:8px;
+
+    margin-bottom:5px;
+
+    background:#1e293b;
+
+    border-radius:8px;
+
+}
