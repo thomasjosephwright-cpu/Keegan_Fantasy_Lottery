@@ -372,3 +372,47 @@ font-size:2rem;
     border-radius:8px;
 
 }
+
+.manager-row{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.manager-row input{
+
+    background:#1e293b;
+
+    color:white;
+
+    border:
+
+    1px solid #334155;
+
+    padding:10px;
+
+    border-radius:8px;
+
+}
+
+
+
+.manager-name{
+
+    flex:1;
+
+}
+
+
+
+.manager-weight{
+
+    width:100px;
+
+}
