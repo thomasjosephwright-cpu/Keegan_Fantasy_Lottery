@@ -358,9 +358,12 @@ function saveManagerSettings(){
 
 
         manager.weight =
-        Number(
-            input.value
-        );
+Math.max(
+    1,
+    Number(
+        input.value
+    )
+);
 
 
     });
@@ -375,6 +378,55 @@ function saveManagerSettings(){
 
     renderManagerEditor();
 
+
+
+}
+
+// ======================================
+// ADD MANAGER
+// ======================================
+
+
+function addManager(){
+
+
+    managers.push({
+
+        id:
+        generateId(),
+
+        name:
+        "New Manager",
+
+        weight:
+        1
+
+    });
+
+
+    renderManagerEditor();
+
+
+}
+
+// ======================================
+// REMOVE MANAGER
+// ======================================
+
+
+function removeManager(id){
+
+
+    managers =
+    managers.filter(
+
+        manager =>
+        manager.id !== id
+
+    );
+
+
+    renderManagerEditor();
 
 
 }
