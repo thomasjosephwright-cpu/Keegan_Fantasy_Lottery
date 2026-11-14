@@ -48,12 +48,12 @@ function renderOdds(){
 
 
 
-    const totalBalls =
+    const totalweight =
     remainingManagers.reduce(
 
         (total,manager)=>
 
-        total + manager.balls,
+        total + manager.weight,
 
         0
 
@@ -74,8 +74,8 @@ function renderOdds(){
         const probability =
 
         (
-            manager.balls /
-            totalBalls *
+            manager.weight /
+            totalWeight *
             100
         )
         .toFixed(1);
@@ -97,7 +97,7 @@ function renderOdds(){
 
 
                 <span>
-                ${manager.balls} balls
+                ${manager.weight} weight
                 |
                 ${probability}%
                 </span>
@@ -219,7 +219,7 @@ function inspectMachine(){
 
 
     console.log(
-        lotteryBalls
+        lotteryweight
     );
 
 
@@ -227,9 +227,9 @@ function inspectMachine(){
 
         "Lottery machine contains "
         +
-        lotteryBalls.length
+        lotteryweight.length
         +
-        " balls."
+        " weight."
 
     );
 
