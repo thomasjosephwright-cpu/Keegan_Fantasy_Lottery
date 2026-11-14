@@ -17,37 +17,37 @@ const managers = [
     {
         id:1,
         name:"Manager 1",
-        balls:12
+        weight:12
     },
 
     {
         id:2,
         name:"Manager 2",
-        balls:8
+        weight:8
     },
 
     {
         id:3,
         name:"Manager 3",
-        balls:6
+        weight:6
     },
 
     {
         id:4,
         name:"Manager 4",
-        balls:4
+        weight:4
     },
 
     {
         id:5,
         name:"Manager 5",
-        balls:2
+        weight:2
     },
 
     {
         id:6,
         name:"Manager 6",
-        balls:1
+        weight:1
     }
 
 ];
