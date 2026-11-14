@@ -221,13 +221,28 @@ function processDraw(ball){
 
 
 
-    eliminateManager(
-        managerId
-    );
+   eliminateManager(
+    managerId
+);
 
 
+// Check if lottery is complete
 
-    updateDashboard();
+if(
+    remainingManagers.length === 1
+){
+
+    finalOrder =
+
+    [
+        ...remainingManagers,
+        ...eliminatedManagers.reverse()
+    ];
+    
+}
+
+
+updateDashboard();
 
 
 }
@@ -332,6 +347,76 @@ eliminated
 
     }
 
+
+
+}
+
+// ======================================
+// BUILD FINAL DRAFT ORDER
+// ======================================
+
+
+function buildFinalOrder(){
+
+
+    finalOrder =
+
+    [...eliminatedManagers]
+    .reverse();
+
+
+
+}
+
+// ======================================
+// DISPLAY FINAL ORDER
+// ======================================
+
+
+function renderFinalOrder(){
+
+
+    const container =
+    document.getElementById(
+        "draftPanel"
+    );
+
+
+    if(!container){
+
+        return;
+
+    }
+
+
+
+    let html = "<ol>";
+
+
+
+    finalOrder.forEach(
+    manager => {
+
+
+        html +=
+
+        `
+        <li>
+        ${manager.name}
+        </li>
+        `;
+
+
+    });
+
+
+
+    html += "</ol>";
+
+
+
+    container.innerHTML =
+    html;
 
 
 }
