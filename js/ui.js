@@ -219,7 +219,7 @@ function inspectMachine(){
 
 
     console.log(
-        lotteryweight
+        lotteryBalls
     );
 
 
@@ -227,9 +227,9 @@ function inspectMachine(){
 
         "Lottery machine contains "
         +
-        lotteryweight.length
+        lotteryBalls.length
         +
-        " weight."
+        " balls."
 
     );
 
