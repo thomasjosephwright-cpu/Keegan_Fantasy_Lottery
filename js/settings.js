@@ -22,37 +22,46 @@ let managers = [
     {
         id: generateId(),
         name:"Manager 1",
-        weight:12
+        weight:12,
+        color:"#ef4444"
     },
 
     {
         id: generateId(),
         name:"Manager 2",
-        weight:8
+        weight:8,
+        color:"#3b82f6"
     },
 
     {
         id: generateId(),
         name:"Manager 3",
-        weight:6
+        weight:6,
+        color:"#22c55e"
     },
 
     {
         id: generateId(),
         name:"Manager 4",
-        weight:4
+        weight:4,
+        color:"#f59e0b"
     },
 
     {
         id: generateId(),
         name:"Manager 5",
-        weight:2
+        weight:2,
+        color:"#a855f7"
     },
 
     {
         id: generateId(),
         name:"Manager 6",
-        weight:1
+        weight:1,
+        "_" +
+        Math.floor(
+            Math.random()*1000
+        color:"#ec4899"
     }
 
 ];
@@ -68,9 +77,6 @@ function generateId(){
     return (
         "manager_" +
         Date.now() +
-        "_" +
-        Math.floor(
-            Math.random()*1000
         )
     );
 
