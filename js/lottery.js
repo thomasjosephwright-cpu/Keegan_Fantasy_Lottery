@@ -202,6 +202,8 @@ async function startLottery(){
         "running"
     );
 
+    startMachineAnimation();
+
     await delay(
         2000
     );
@@ -528,7 +530,8 @@ if(results){
 
 function completeLottery(){
 
-
+stopMachineAnimation();
+    
     finalOrder =
 
     [
