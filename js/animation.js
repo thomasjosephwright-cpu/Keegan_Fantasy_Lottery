@@ -186,7 +186,16 @@ function renderMachineBalls(){
 
 
         element.className =
-        "lottery-ball";
+"lottery-ball";
+
+
+if(ball.selected){
+
+    element.classList.add(
+        "selected-ball"
+    );
+
+}
 
 
 
