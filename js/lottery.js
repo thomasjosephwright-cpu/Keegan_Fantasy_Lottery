@@ -173,17 +173,15 @@ function delay(ms){
 async function runAutomaticLottery(){
 
 
-    while(
-        remainingManagers.length > 1
-    ){
+    while(remainingManagers.length > 1){
 
-        drawNextBall();
+    await animateDraw();
 
-        await delay(
-            2000
-        );
+    drawNextBall();
 
-    }
+    await revealWinner();
+
+}
 
 
 }
@@ -205,7 +203,7 @@ async function startLottery(){
     );
 
     await delay(
-        1000
+        2000
     );
 
     await runAutomaticLottery();
