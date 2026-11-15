@@ -266,13 +266,9 @@ async function performDraw(){
     lotteryBalls[randomIndex];
 
 
-
-    // Remove selected ball
-
-    lotteryBalls.splice(
-        randomIndex,
-        1
-    );
+    await animateSelectedBall(
+    selectedBall
+);
 
 
 
