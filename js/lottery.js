@@ -192,7 +192,7 @@ async function runAutomaticLottery(){
 // START LOTTERY
 // ======================================
 
-function startLottery(){
+async function startLottery(){
 
     initialiseLottery();
 
@@ -204,35 +204,15 @@ function startLottery(){
         "running"
     );
 
-}
+    await delay(
+        1000
+    );
 
-    document
-    .getElementById(
-        "drawBall"
-    )
-    .disabled = false;
-
-
-    document
-    .getElementById(
-        "startButton"
-    )
-    .disabled = true;
-
-
-    document
-    .getElementById(
-        "drawResult"
-    )
-    .innerHTML =
-    "Lottery started.";
-
-
-    updateDashboard();
-
+    await runAutomaticLottery();
 
 }
 
+  
 // ======================================
 // BUILD LOTTERY BALL MACHINE
 // ======================================
@@ -290,13 +270,7 @@ function buildBallMachine(){
 
 function drawNextBall(){
 
-    if(!lotteryActive){
-
-    return;
-
-}
-
-    if(lotteryBalls.length === 0){
+  if(lotteryBalls.length === 0){
 
 
         console.log(
@@ -484,17 +458,6 @@ function eliminateManager(id){
         ball.managerId !== id
 
     );
-
-document
-.getElementById(
-    "machineDisplay"
-)
-.innerHTML =
-
-`
-Balls remaining:
-${lotteryBalls.length}
-`;
 
     const results =
     document.getElementById(
