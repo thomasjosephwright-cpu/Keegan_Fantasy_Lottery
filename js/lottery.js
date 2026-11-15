@@ -177,18 +177,133 @@ async function runAutomaticLottery(){
         remainingManagers.length > 1
     ){
 
-        await delay(
-            5000
-        );
-
-
-        drawNextBall();
-
-        await delay(
-            4000
-        );
+        await performDraw();
 
     }
+
+
+}
+
+// ======================================
+// PERFORM SINGLE DRAW
+// ======================================
+
+async function performDraw(){
+
+
+    const display =
+    document.getElementById(
+        "machineDisplay"
+    );
+
+
+    // Countdown
+
+    if(display){
+
+        display.innerHTML =
+        "Selecting in 3...";
+
+    }
+
+
+    await delay(1000);
+
+
+
+    if(display){
+
+        display.innerHTML =
+        "Selecting in 2...";
+
+    }
+
+
+    await delay(1000);
+
+
+
+    if(display){
+
+        display.innerHTML =
+        "Selecting in 1...";
+
+    }
+
+
+    await delay(1000);
+
+
+
+    if(display){
+
+        display.innerHTML =
+        "Selecting ball...";
+
+    }
+
+
+
+    await delay(1500);
+
+
+
+    // Pick a ball
+
+    const randomIndex =
+
+    Math.floor(
+
+        Math.random()
+        *
+        lotteryBalls.length
+
+    );
+
+
+
+    const selectedBall =
+    lotteryBalls[randomIndex];
+
+
+
+    // Remove selected ball
+
+    lotteryBalls.splice(
+        randomIndex,
+        1
+    );
+
+
+
+    // Reveal
+
+    if(display){
+
+        display.innerHTML =
+
+        `
+        Selected ball:
+        <strong>
+        ${selectedBall.managerName}
+        </strong>
+        `;
+
+    }
+
+
+
+    await delay(2000);
+
+
+
+    processDraw(
+        selectedBall
+    );
+
+
+    await delay(2000);
+
 
 }
 
