@@ -233,7 +233,10 @@ function buildBallMachine(){
             i++
         ){
 
-            lotteryBalls.push({
+lotteryBalls.push({
+
+    id:
+    crypto.randomUUID(),
 
     managerId:
     manager.id,
@@ -242,7 +245,21 @@ function buildBallMachine(){
     manager.name,
 
     color:
-    manager.color
+    manager.color,
+
+
+    x:
+    Math.random() * 600,
+
+    y:
+    Math.random() * 250,
+
+
+    vx:
+    (Math.random() * 2) - 1,
+
+    vy:
+    (Math.random() * 2) - 1
 
 });
 
