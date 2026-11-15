@@ -11,7 +11,11 @@ let finalOrder = [];
 
 let lotteryBalls = [];
 
-let lotteryActive = false;
+// ======================================
+// APPLICATION STATE
+// ======================================
+
+let lotteryState = "idle";
 
 
 // ======================================
@@ -53,6 +57,93 @@ function initialiseLottery(){
         remainingManagers
     );
 
+
+}
+
+// ======================================
+// SET LOTTERY STATE
+// ======================================
+
+function setLotteryState(state){
+
+    lotteryState = state;
+
+
+    const startButton =
+    document.getElementById(
+        "startButton"
+    );
+
+    const drawButton =
+    document.getElementById(
+        "drawBall"
+    );
+
+    const managerSection =
+    document.getElementById(
+        "managerSection"
+    );
+
+
+    switch(state){
+
+        case "idle":
+
+            startButton.disabled = false;
+            startButton.textContent =
+            "Start Lottery";
+
+            drawButton.disabled = false;
+
+            managerSection.open = false;
+
+            document
+            .getElementById(
+                "machineStatus"
+            )
+            .textContent =
+            "READY";
+
+        break;
+
+
+        case "running":
+
+            startButton.disabled = true;
+
+            drawButton.disabled = true;
+
+            managerSection.open = false;
+
+            document
+            .getElementById(
+                "machineStatus"
+            )
+            .textContent =
+            "RUNNING";
+
+        break;
+
+
+        case "complete":
+
+            startButton.disabled = false;
+
+            startButton.textContent =
+            "New Lottery";
+
+            drawButton.disabled = false;
+
+            document
+            .getElementById(
+                "machineStatus"
+            )
+            .textContent =
+            "COMPLETE";
+
+        break;
+
+    }
 
 }
 
