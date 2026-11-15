@@ -58,9 +58,6 @@ let managers = [
         id: generateId(),
         name:"Manager 6",
         weight:1,
-        "_" +
-        Math.floor(
-            Math.random()*1000
         color:"#ec4899"
     }
 
@@ -77,12 +74,13 @@ function generateId(){
     return (
         "manager_" +
         Date.now() +
+        "_" +
+        Math.floor(
+            Math.random()*1000
         )
     );
 
 }
-
-
 
 
 // ======================================
