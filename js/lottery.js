@@ -533,8 +533,12 @@ if(results){
 
 function completeLottery(){
 
-stopMachineAnimation();
-    
+    stopMachineAnimation();
+
+    lotteryBalls = [];
+
+    renderMachineBalls();
+
     finalOrder =
 
     [
