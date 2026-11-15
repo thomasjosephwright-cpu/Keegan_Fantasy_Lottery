@@ -538,14 +538,28 @@ function completeLottery(){
 
     stopMachineAnimation();
 
-   finalOrder =
+
+    const winner =
+    remainingManagers[0];
+
+
+    lotteryBalls =
+    lotteryBalls.filter(
+        ball =>
+        ball.managerId === winner.id
+    );
+
+
+    renderMachineBalls();
+
+
+    finalOrder =
 
     [
         ...remainingManagers,
         ...[...eliminatedManagers]
         .reverse()
     ];
-
 
 
     renderFinalOrder();
