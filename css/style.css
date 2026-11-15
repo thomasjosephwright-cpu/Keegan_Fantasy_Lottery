@@ -468,3 +468,35 @@ details .panel{
     }
 
 }
+
+/* ======================================
+   ANIMATED LOTTERY BALLS
+====================================== */
+
+
+#machineBalls{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+
+.lottery-ball{
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    transform:translate(-50%,-50%);
+
+    box-shadow:
+
+    0 0 12px rgba(255,255,255,.5);
+
+}
