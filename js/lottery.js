@@ -148,6 +148,47 @@ function setLotteryState(state){
 }
 
 // ======================================
+// DELAY
+// ======================================
+
+function delay(ms){
+
+    return new Promise(
+
+        resolve =>
+
+        setTimeout(
+            resolve,
+            ms
+        )
+
+    );
+
+}
+
+// ======================================
+// RUN AUTOMATIC LOTTERY
+// ======================================
+
+async function runAutomaticLottery(){
+
+
+    while(
+        remainingManagers.length > 1
+    ){
+
+        drawNextBall();
+
+        await delay(
+            2000
+        );
+
+    }
+
+
+}
+
+// ======================================
 // START LOTTERY
 // ======================================
 
