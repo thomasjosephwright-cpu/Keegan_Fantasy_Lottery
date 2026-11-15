@@ -5,7 +5,7 @@
 
 let animationRunning = false;
 
-
+let selectedBall = null;
 
 function startMachineAnimation(){
 
@@ -29,7 +29,24 @@ function stopMachineAnimation(){
 
 }
 
+// ======================================
+// SELECT BALL ANIMATION
+// ======================================
 
+
+async function animateSelectedBall(ball){
+
+
+    selectedBall = ball;
+
+
+    ball.selected = true;
+
+
+    await delay(1000);
+
+
+}
 
 
 // ======================================
