@@ -7,13 +7,15 @@ document.addEventListener(
 "DOMContentLoaded",
 ()=>{
 
-    initialiseLottery();
+initialiseLottery();
 
-    buildBallMachine();
+updateDashboard();
 
-    updateDashboard();
+renderManagerEditor();
 
-    renderManagerEditor();
+setLotteryState(
+    "idle"
+);
 
 document
 .getElementById(
