@@ -235,15 +235,16 @@ function buildBallMachine(){
 
             lotteryBalls.push({
 
-                managerId:
-                manager.id,
+    managerId:
+    manager.id,
 
+    managerName:
+    manager.name,
 
-                managerName:
-                manager.name
+    color:
+    manager.color
 
-
-            });
+});
 
 
         }
@@ -257,7 +258,6 @@ function buildBallMachine(){
         "Lottery machine built",
         lotteryBalls
     );
-
 
 }
 
