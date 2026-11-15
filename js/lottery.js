@@ -153,13 +153,17 @@ function setLotteryState(state){
 
 function startLottery(){
 
-
     initialiseLottery();
 
     buildBallMachine();
 
-    lotteryActive = true;
+    updateDashboard();
 
+    setLotteryState(
+        "running"
+    );
+
+}
 
     document
     .getElementById(
@@ -518,7 +522,9 @@ function completeLottery(){
 
     renderFinalOrder();
 
-lotteryActive = false;
+setLotteryState(
+    "complete"
+);
 
 
 document
