@@ -32,6 +32,11 @@ function stopMachineAnimation(){
 
 
 
+// ======================================
+// ANIMATE MACHINE
+// ======================================
+
+
 function animateMachine(){
 
 
@@ -42,8 +47,19 @@ function animateMachine(){
     }
 
 
+
+    const width = 650;
+
+    const height = 300;
+
+    const radius = 15;
+
+
+
     lotteryBalls.forEach(ball=>{
 
+
+        // Move ball
 
         ball.x += ball.vx;
 
@@ -51,18 +67,50 @@ function animateMachine(){
 
 
 
-        if(ball.x < 15 || ball.x > 585){
+        // Bounce off sides
+
+        if(
+            ball.x < radius ||
+            ball.x > width - radius
+        ){
 
             ball.vx *= -1;
 
         }
 
 
-        if(ball.y < 15 || ball.y > 285){
+
+        // Bounce off top and bottom
+
+        if(
+            ball.y < radius ||
+            ball.y > height - radius
+        ){
 
             ball.vy *= -1;
 
         }
+
+
+
+        // Keep ball inside machine
+
+        ball.x = Math.max(
+            radius,
+            Math.min(
+                width - radius,
+                ball.x
+            )
+        );
+
+
+        ball.y = Math.max(
+            radius,
+            Math.min(
+                height - radius,
+                ball.y
+            )
+        );
 
 
     });
@@ -80,6 +128,14 @@ function animateMachine(){
 
 }
 
+
+
+
+// ======================================
+// DRAW BALLS ON SCREEN
+// ======================================
+
+
 function renderMachineBalls(){
 
 
@@ -89,6 +145,7 @@ function renderMachineBalls(){
     );
 
 
+
     if(!container){
 
         return;
@@ -96,7 +153,8 @@ function renderMachineBalls(){
     }
 
 
-    container.innerHTML="";
+
+    container.innerHTML = "";
 
 
 
@@ -109,16 +167,20 @@ function renderMachineBalls(){
         );
 
 
+
         element.className =
         "lottery-ball";
+
 
 
         element.style.background =
         ball.color;
 
 
+
         element.style.left =
         ball.x + "px";
+
 
 
         element.style.top =
