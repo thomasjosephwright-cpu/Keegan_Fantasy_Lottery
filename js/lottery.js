@@ -178,12 +178,15 @@ async function runAutomaticLottery(){
     ){
 
         await delay(
-            3000
+            5000
         );
 
 
         drawNextBall();
 
+        await delay(
+            4000
+        );
 
     }
 
@@ -535,11 +538,7 @@ function completeLottery(){
 
     stopMachineAnimation();
 
-    lotteryBalls = [];
-
-    renderMachineBalls();
-
-    finalOrder =
+   finalOrder =
 
     [
         ...remainingManagers,
